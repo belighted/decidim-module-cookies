@@ -3,8 +3,10 @@
 source "https://rubygems.org"
 
 ruby RUBY_VERSION
+# TODO: update Ruby back to 2.6.5+
 
-gem "decidim", git: "https://github.com/decidim/decidim", branch: "develop"
+# gem "decidim", git: "https://github.com/decidim/decidim", branch: "develop"
+gem "decidim", git: "https://github.com/decidim/decidim", branch: "release/0.22-stable"
 gem "decidim-cookies", path: "."
 
 gem "bootsnap", "~> 1.3"
