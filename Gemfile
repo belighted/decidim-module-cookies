@@ -5,8 +5,9 @@ source "https://rubygems.org"
 ruby RUBY_VERSION
 # TODO: update Ruby back to 2.6.5+
 
-# gem "decidim", git: "https://github.com/decidim/decidim", branch: "develop"
-gem "decidim", git: "https://github.com/decidim/decidim", branch: "release/0.22-stable"
+DECIDIM_VERSION = '0.22.0' #{ git: 'https://github.com/decidim/decidim', branch: 'release/0.22-stable' }
+
+gem "decidim", DECIDIM_VERSION
 gem "decidim-cookies", path: "."
 
 gem "bootsnap", "~> 1.3"
@@ -17,7 +18,7 @@ gem "uglifier", "~> 4.1"
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
 
-  gem "decidim-dev", git: "https://github.com/decidim/decidim", branch: "develop"
+  gem "decidim-dev", DECIDIM_VERSION
 end
 
 group :development do
