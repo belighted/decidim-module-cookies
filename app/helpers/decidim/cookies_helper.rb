@@ -5,7 +5,7 @@ module Decidim
   module CookiesHelper
     # Public: Returns true if the cookie policy has been accepted
     def cookies_accepted?
-      cookies["decidim-cc"] = nil if cookies["decidim-cc"].to_s == 'true' # ignore single-value accepted cookies
+      cookies.delete("decidim-cc") if cookies["decidim-cc"].blank? || cookies["decidim-cc"].to_s == 'true' # ignore single-value accepted cookies
 
       cookies["decidim-cc"].present?
     end
