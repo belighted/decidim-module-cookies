@@ -14,6 +14,8 @@ fr:
           description: Un faux cookie pour montrer avec plus de cookies
         matomo:
           description: Permet de récolter des informations afin d'améliorer l'expérience utilisateur
+        youtube:
+          description: Permet de récolter des informations afin d'améliorer l'expérience utilisateur
         name: Cookies
         purposes:
           ads: Contenu additionnel
