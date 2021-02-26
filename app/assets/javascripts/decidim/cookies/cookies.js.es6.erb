@@ -20,6 +20,18 @@
     // translations have to be defined in `layouts/decidim/_cookies.html.erb` because of assets compilation
     translations: {},
     apps: [
+      {
+        name: "decidim",
+        title: "decidim-cc",
+        required: true,
+        purposes: ["checking"]
+      },
+      {
+        name: "decidim_session",
+        title: "decidim_session",
+        required: true,
+        purposes: ["session"]
+      },
       // {
       //     name: "dummy",
       //     title: "Dummy cookie",
@@ -72,12 +84,6 @@
           "VISITOR_INFO1_LIVE"
         ],
         purposes: ["tracking"]
-      },
-      {
-        name: "decidim",
-        title: "decidim-cc",
-        required: true,
-        purposes: ["checking"]
       }
     ],
   };
