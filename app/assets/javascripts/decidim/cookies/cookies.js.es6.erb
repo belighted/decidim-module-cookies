@@ -88,10 +88,15 @@
     ],
   };
 
+  $(document).on('click', '.orejime-Modal-footer > .orejime-Modal-saveButton', () => {
+    location.reload()
+  });
+
   $(document).on('click', '.orejime-Notice-actionItem--save > .orejime-Notice-saveButton', () => {
     acceptAll()
     orejime.internals.manager.saveConsents()
     orejime.internals.manager.applyConsents()
+    location.reload()
   });
 
   // Override default behaviour of "Accept all" button. Allows to accept all cookies defined ( optionals and required )
