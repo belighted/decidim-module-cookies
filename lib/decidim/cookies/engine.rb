@@ -18,6 +18,13 @@ module Decidim
       initializer "decidim_cookies.assets" do |app|
         app.config.assets.precompile += %w(decidim_cookies_manifest.js decidim_cookies_manifest.css)
       end
+
+      initializer "decidim_cookies.extends" do
+        Dir.glob("#{Decidim::Cookies::Engine.root}/lib/extends/cookies/**/*.rb").each do |override|
+          require_dependency override
+        end
+      end
+
     end
   end
 end
