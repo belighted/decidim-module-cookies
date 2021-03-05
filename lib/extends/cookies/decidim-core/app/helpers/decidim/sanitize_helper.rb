@@ -9,7 +9,7 @@ module Cookies
     included do
 
       def decidim_sanitize(_html, options = {})
-        html = remove_youtube_iframes(_html)
+        html = consent_youtube_iframes(_html)
 
         if options[:strip_tags]
           strip_tags sanitize(html, scrubber: Decidim::UserInputScrubber.new)
@@ -18,9 +18,7 @@ module Cookies
         end
       end
 
-      private
-
-      def remove_youtube_iframes(html)
+      def consent_youtube_iframes(html)
         c = JSON.parse(cookies['decidim-cc']).try(:[], 'youtube') rescue nil
         return html if c
 
@@ -31,7 +29,7 @@ module Cookies
               el.remove
             end
           end
-          doc.at('body').inner_html
+          (doc.at('body') || doc).inner_html.html_safe
         else
           html
         end
