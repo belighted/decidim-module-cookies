@@ -2,11 +2,6 @@
 
 Cookies banner using Orejime.
 
-## Usage
-
-Cookies will be available as a Component for a Participatory
-Space.
-
 ## Installation
 
 Add this line to your application's Gemfile:
