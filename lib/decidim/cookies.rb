@@ -3,11 +3,9 @@
 require "decidim/cookies/admin"
 require "decidim/cookies/engine"
 require "decidim/cookies/admin_engine"
-require "decidim/cookies/component"
 
 module Decidim
-  # This namespace holds the logic of the `Cookies` component. This component
-  # allows users to create cookies in a participatory space.
+  # This namespace holds the logic of the `Cookies` component.
   module Cookies
   end
 end
